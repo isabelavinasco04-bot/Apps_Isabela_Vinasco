@@ -13,7 +13,7 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
     st.subheader("Conversión de texto a voz")
-    image = Image.open('texto_avoz.png')
+    image = Image.open('texto_avoz.jpg')
     st.image(image, width=190)
     st.write("En el siguiente enlace podrás usar nuestra aplicación de Inteligencia Artificial para convertir texto a voz:")
 
