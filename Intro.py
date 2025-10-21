@@ -12,6 +12,7 @@ with st.sidebar:
 col1, col2, col3 = st.columns(3)
 
 with col1:
+    #APP1
     st.subheader("Conversión de texto a voz")
     image = Image.open('texto_avoz.jpg')
     st.image(image, width=190)
@@ -52,13 +53,30 @@ with col1:
     st.write(f"YOLO: [Enlace]({url})")
 
 with col2:
-    st.subheader("Conversión de voz a texto")
-    image = Image.open('OIG8.jpg')
-    st.image(image, width=200)
-    st.write("En la siguiente veremos una aplicación que usa la conversión de voz a texto.")
-    url = "https://traductor-ab0sp9f6fi.streamlit.app/"
-    st.write(f"Voz a texto: [Enlace]({url})")
-
+    #APP 2
+    # --- App 2: Audio a texto ---
+st.subheader("Audio a texto")
+image = Image.open('audio_atexto.jpg')
+st.image(image, width=200)
+st.write("En la siguiente enlace podrás usar la aplicación de Inteligencia Artificial que convierte archivos de audio a texto.")
+st.markdown(
+    """
+    <a href="https://intro2-fojj4mqk3pvfuy4gb5twvg.streamlit.app/" target="_blank">
+        <button style="
+            background-color:#ff66b3;
+            color:white;
+            border:none;
+            padding:12px 24px;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+        ">
+            🎧 Abrir aplicación de Audio a Texto
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True
+)
     st.subheader("Análisis de Datos")
     image = Image.open('data_analisis.png')
     st.image(image, width=190)
