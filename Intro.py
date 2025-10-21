@@ -55,11 +55,11 @@ with col1:
 with col2:
     #APP 2
     # --- App 2: Audio a texto ---
-st.subheader("Audio a texto")
-image = Image.open('audio_atexto.jpg')
-st.image(image, width=200)
-st.write("En la siguiente enlace podrás usar la aplicación de Inteligencia Artificial que convierte archivos de audio a texto.")
-st.markdown(
+    st.subheader("Audio a texto")
+    image = Image.open('audio_atexto.jpg')
+    st.image(image, width=200)
+    st.write("En la siguiente enlace podrás usar la aplicación de Inteligencia Artificial que convierte archivos de audio a texto.")
+    st.markdown(
     """
     <a href="https://intro2-fojj4mqk3pvfuy4gb5twvg.streamlit.app/" target="_blank">
         <button style="
@@ -76,7 +76,7 @@ st.markdown(
     </a>
     """,
     unsafe_allow_html=True
-)
+    )
     st.subheader("Análisis de Datos")
     image = Image.open('data_analisis.png')
     st.image(image, width=190)
