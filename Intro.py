@@ -92,12 +92,29 @@ with col2:
     st.write(f"Transcriptor: [Enlace]({url})")
 
 with col3:
-    st.subheader("Generación en Contexto")
-    image = Image.open('Chat_pdf.png')
-    st.image(image, width=190)
-    st.write("En la siguiente veremos una aplicación que usa RAG a partir de un documento (PDF).")
-    url = "https://chatpdf-cc.streamlit.app/"
-    st.write(f"RAG: [Enlace]({url})")
+    # --- App: Detección de Rostros ---
+    st.subheader("Detección de Rostros")
+    image = Image.open('OCR.jpg')  # 👈 usa tu imagen real
+    st.image(image, width=200)
+    st.write("En la siguiente aplicación podrás detectar rostros en una imagen o foto tomada con tu cámara, y escuchar el resultado en diferentes idiomas.")
+    st.markdown(
+    """
+    <a href="https://ocr-isa2.streamlit.app/" target="_blank">
+        <button style="
+            background-color:#ff66b3;
+            color:white;
+            border:none;
+            padding:12px 24px;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+        ">
+            🧠 Abrir aplicación de Detección de Rostros
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True
+)
 
     st.subheader("Análisis de Imagen")
     image = Image.open('OIG4.jpg')
