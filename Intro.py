@@ -55,7 +55,7 @@ with col1:
 with col2:
     #APP 2
     # --- App 2: Audio a texto ---
-    st.subheader("Audio a texto")
+    st.subheader("Conversión de Audio a texto")
     image = Image.open('audio_atexto.jpg')
     st.image(image, width=200)
     st.write("En la siguiente enlace podrás usar la aplicación de Inteligencia Artificial que convierte archivos de audio a texto.")
