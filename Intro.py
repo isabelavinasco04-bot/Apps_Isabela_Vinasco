@@ -11,12 +11,30 @@ with st.sidebar:
 with col1:
  
  st.subheader("Conversión de texto a voz")
- image = Image.open('txt_to_audio2.png')
- st.image(image, width=190)
- st.write("En la siguiente enlace usaremos una de las aplicaciones de Inteligencia Artificial") 
- url = "https://imultimod.streamlit.app/"
- st.write(f"Texto a voz: [Enlace]({url})")
-
+# Mostrar imagen
+image = Image.open('texto_avoz.png')
+st.image(image, width=190)
+# Texto descriptivo
+st.write("En el siguiente enlace podrás usar nuestra aplicación de Inteligencia Artificial para convertir texto a voz:")
+# Botón rosado que abre en una nueva pestaña
+st.markdown(
+    """
+    <a href="https://intro3-cv4kbcjgxbiveh8ph2kmyp.streamlit.app/" target="_blank">
+        <button style="
+            background-color:#ff66b3;
+            color:white;
+            border:none;
+            padding:12px 24px;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+        ">
+            💗 Abrir aplicación de Texto a Voz
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True
+)
  st.subheader("Reconocimiento de Objetos")
  image = Image.open('txt_to_audio.png')
  st.image(image, width=200)
