@@ -38,12 +38,29 @@ with col1:
         unsafe_allow_html=True
     )
 
-    st.subheader("Reconocimiento de Objetos")
-    image = Image.open('txt_to_audio.png')
+   # --- App: Analizador de Sentimientos ---
+    st.subheader("Analizador de Sentimientos")
+    image = Image.open('sentimientos.jpg')  # 👈 asegúrate de que el archivo esté en la misma carpeta que Intro.py
     st.image(image, width=200)
-    st.write("En la siguiente enlace veremos cómo se detectan objetos en imágenes.")
-    url = "https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/"
-    st.write(f"YOLO: [Enlace]({url})")
+    st.write("En esta aplicación podrás analizar el sentimiento de un texto y descubrir si es positivo, negativo o neutro, con ayuda de Inteligencia Artificial.")
+    st.markdown(
+    """
+    <a href="https://isabelavinasco.streamlit.app/" target="_blank">
+        <button style="
+            background-color:#ff66b3;
+            color:white;
+            border:none;
+            padding:12px 24px;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+        ">
+            💬 Abrir Analizador de Sentimientos
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True
+    )
 
     st.subheader("Entrenando Modelos")
     image = Image.open('OIG5.jpg')
