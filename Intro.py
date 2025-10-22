@@ -212,7 +212,7 @@ with col2:
 
 with col3:
     # --- App: OCR Final ---
-    st.subheader("OCR Final")
+    st.subheader("reconocimiento óptico de caracteres")
     image = Image.open('ocr_final.jpg')  # 👈 asegúrate de que esté en la misma carpeta que Intro.py
     st.image(image, width=200)
     st.write("En esta aplicación podrás realizar reconocimiento óptico de caracteres (OCR) y convertir texto desde imágenes de forma precisa y rápida.")
