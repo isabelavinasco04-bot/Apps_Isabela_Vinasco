@@ -196,14 +196,30 @@ with col3:
     unsafe_allow_html=True
 )
 
-
-
-
-
-
-
-
-
+    
+    # --- App: Análisis de Textos en Inglés ---
+    st.subheader("Análisis de Textos en Inglés")
+    image = Image.open('texto_ingles.jpg')  # 👈 asegúrate de tener la imagen en la misma carpeta que Intro.py
+    st.image(image, width=200)
+    st.write("En esta aplicación podrás analizar textos en inglés, identificar sentimientos, temas principales y generar resúmenes con modelos de Inteligencia Artificial.")
+    st.markdown(
+    """
+    <a href="https://isabela-vinasco-docs.streamlit.app/" target="_blank">
+        <button style="
+            background-color:#ff66b3;
+            color:white;
+            border:none;
+            padding:12px 24px;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+        ">
+            🇬🇧 Abrir Análisis de Textos en Inglés
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True
+    )
 
 
     
