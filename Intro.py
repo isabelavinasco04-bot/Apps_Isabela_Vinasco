@@ -1,231 +1,164 @@
 import streamlit as st
 from PIL import Image
 
-# --- CONFIGURACIÓN DE PÁGINA ---
-st.set_page_config(page_title="Aplicaciones IA 💗", layout="wide")
+# --- CONFIGURACIÓN GENERAL ---
+st.set_page_config(page_title="Aplicaciones de Isa 💗", layout="wide")
 
-# --- ESTILO VISUAL ROSADO Y CENTRADO ---
-page_bg = """
-<style>
-[data-testid="stAppViewContainer"] {
-    background: linear-gradient(180deg, #ffe6f2 0%, #ffccdf 100%);
-    color: #333333;
-}
-[data-testid="stSidebar"] {
-    background-color: #ffb3d9;
-}
-h1, h2, h3 {
-    color: #ff3399;
-    text-align: center;
-}
-div[data-testid="column"] {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-button {
-    font-weight: bold;
-}
-</style>
-"""
-st.markdown(page_bg, unsafe_allow_html=True)
+# Fondo rosado mediante CSS personalizado
+st.markdown(
+    """
+    <style>
+    body {
+        background-color: #ffe6f0;
+    }
+    [data-testid="stAppViewContainer"] {
+        background-color: #ffe6f0;
+    }
+    [data-testid="stSidebar"] {
+        background-color: #ffb3cc;
+        color: white;
+    }
+    h1, h2, h3, h4, h5, h6, p {
+        text-align: center;
+    }
+    .app-card {
+        background-color: white;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    .app-card img {
+        border-radius: 10px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
-# --- TÍTULO PRINCIPAL ---
-st.title("💗 Mis Aplicaciones con Inteligencia Artificial 💗")
+# --- TÍTULO ---
+st.title("🌸 Aplicaciones desarrolladas por Isa 🌸")
 
 # --- SIDEBAR ---
 with st.sidebar:
-    st.subheader("Aplicaciones con Inteligencia Artificial 🧠")
-    st.write("Estas son mis aplicaciones desarrolladas en clase. 🌸 ¡Explora y experimenta con IA!")
+    st.subheader("Aplicaciones con Inteligencia Artificial 💫")
+    st.write("Estas son mis aplicaciones desarrolladas en clase, un recorrido por mi aprendizaje en IA, programación y creatividad digital.")
 
-# --- CREAR COLUMNAS ---
+# --- APP PRINCIPAL ---
+st.markdown("<br>", unsafe_allow_html=True)
+st.subheader("Mi Primera App 💗")
+image = Image.open('app1.jpg')
+st.image(image, width=230)
+st.write("Esta fue mi primera aplicación desarrollada con Streamlit. 🌸 Un punto de partida en mi camino de exploración con la Inteligencia Artificial, la programación y la creatividad digital.")
+st.markdown(
+    """
+    <div style="text-align:center;">
+        <a href="https://miprimeraappisa.streamlit.app/" target="_blank">
+            <button style="
+                background-color:#ff66b3;
+                color:white;
+                border:none;
+                padding:12px 24px;
+                border-radius:8px;
+                font-size:16px;
+                cursor:pointer;
+            ">
+                💗 Abrir Mi Primera App
+            </button>
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown("<br><hr><br>", unsafe_allow_html=True)
+
+# --- COLUMNAS ALINEADAS ---
 col1, col2, col3 = st.columns(3)
 
-# 🔹 COLUMNA 1 🔹
+# --------- COLUMNA 1 ---------
 with col1:
-    # Mi Primera App
-    st.subheader("Mi Primera App")
-    image = Image.open('app1.jpg')
-    st.image(image, width=220)
-    st.write("Mi primera app desarrollada con Streamlit. 🌸 Un punto de partida en mi camino de exploración con la IA.")
-    st.markdown(
-        """
-        <a href="https://miprimeraappisa.streamlit.app/" target="_blank">
-            <button style="background-color:#ff66b3;color:white;border:none;padding:12px 24px;border-radius:10px;font-size:16px;cursor:pointer;">💗 Abrir</button>
-        </a>
-        """, unsafe_allow_html=True)
+    apps_col1 = [
+        ("Conversión de texto a voz", "texto_avoz.jpg", "https://intro3-cv4kbcjgxbiveh8ph2kmyp.streamlit.app/", "💗 Abrir aplicación de Texto a Voz"),
+        ("Analizador de Sentimientos", "sentimientos.jpg", "https://isabelavinasco.streamlit.app/", "💬 Abrir Analizador de Sentimientos"),
+        ("Reconocimiento de Gestos", "gesto.jpg", "https://yolov5-isa.streamlit.app/", "✋ Abrir Reconocimiento de Gestos"),
+        ("Interpretación de Objetos en Imagen", "vision_app.jpg", "https://visionapp-isa-lpq3fitf2jwnkastes8odi.streamlit.app/", "🖼️ Abrir Reconocimiento de Objetos"),
+        ("Control por Voz", "voice.jpg", "https://ctrlvoiceisa.streamlit.app/", "🎙️ Abrir Control por Voz")
+    ]
 
-    # Conversión de texto a voz
-    st.subheader("Conversión de Texto a Voz")
-    image = Image.open('texto_avoz.jpg')
-    st.image(image, width=220)
-    st.write("Convierte texto a voz con esta app de IA 🎤")
-    st.markdown(
-        """
-        <a href="https://intro3-cv4kbcjgxbiveh8ph2kmyp.streamlit.app/" target="_blank">
-            <button style="background-color:#ff66b3;color:white;border:none;padding:12px 24px;border-radius:10px;font-size:16px;cursor:pointer;">🔊 Abrir</button>
-        </a>
-        """, unsafe_allow_html=True)
+    for title, img, link, button in apps_col1:
+        with st.container():
+            st.markdown(f"<div class='app-card'><h3>{title}</h3>", unsafe_allow_html=True)
+            st.image(Image.open(img), width=200)
+            st.markdown(f"""
+                <p></p>
+                <a href="{link}" target="_blank">
+                    <button style="
+                        background-color:#ff66b3;
+                        color:white;
+                        border:none;
+                        padding:12px 24px;
+                        border-radius:8px;
+                        font-size:16px;
+                        cursor:pointer;
+                    ">{button}</button>
+                </a></div>
+            """, unsafe_allow_html=True)
 
-    # Analizador de Sentimientos
-    st.subheader("Analizador de Sentimientos")
-    image = Image.open('sentimientos.jpg')
-    st.image(image, width=220)
-    st.write("Analiza si un texto es positivo, negativo o neutro 💬")
-    st.markdown(
-        """
-        <a href="https://isabelavinasco.streamlit.app/" target="_blank">
-            <button style="background-color:#ff66b3;color:white;border:none;padding:12px 24px;border-radius:10px;font-size:16px;cursor:pointer;">💬 Abrir</button>
-        </a>
-        """, unsafe_allow_html=True)
-
-    # Reconocimiento de Gestos
-    st.subheader("Reconocimiento de Gestos")
-    image = Image.open('gesto.jpg')
-    st.image(image, width=220)
-    st.write("Reconoce gestos humanos con YOLOv5 ✋")
-    st.markdown(
-        """
-        <a href="https://yolov5-isa.streamlit.app/" target="_blank">
-            <button style="background-color:#ff66b3;color:white;border:none;padding:12px 24px;border-radius:10px;font-size:16px;cursor:pointer;">✋ Abrir</button>
-        </a>
-        """, unsafe_allow_html=True)
-
-    # Interpretación de Objetos
-    st.subheader("Interpretación de Objetos en Imagen")
-    image = Image.open('vision_app.jpg')
-    st.image(image, width=220)
-    st.write("Sube una imagen y la IA detectará los objetos 🖼️")
-    st.markdown(
-        """
-        <a href="https://visionapp-isa-lpq3fitf2jwnkastes8odi.streamlit.app/" target="_blank">
-            <button style="background-color:#ff66b3;color:white;border:none;padding:12px 24px;border-radius:10px;font-size:16px;cursor:pointer;">🖼️ Abrir</button>
-        </a>
-        """, unsafe_allow_html=True)
-
-    # Control por Voz
-    st.subheader("Control por Voz")
-    image = Image.open('voice.jpg')
-    st.image(image, width=220)
-    st.write("Controla acciones mediante comandos de voz 🎙️")
-    st.markdown(
-        """
-        <a href="https://ctrlvoiceisa.streamlit.app/" target="_blank">
-            <button style="background-color:#ff66b3;color:white;border:none;padding:12px 24px;border-radius:10px;font-size:16px;cursor:pointer;">🎙️ Abrir</button>
-        </a>
-        """, unsafe_allow_html=True)
-
-
-# 🔹 COLUMNA 2 🔹
+# --------- COLUMNA 2 ---------
 with col2:
-    # Audio a Texto
-    st.subheader("Conversión de Audio a Texto")
-    image = Image.open('audio_atexto.jpg')
-    st.image(image, width=220)
-    st.write("Convierte tus audios en texto 🎧")
-    st.markdown(
-        """
-        <a href="https://intro2-fojj4mqk3pvfuy4gb5twvg.streamlit.app/" target="_blank">
-            <button style="background-color:#ff66b3;color:white;border:none;padding:12px 24px;border-radius:10px;font-size:16px;cursor:pointer;">🎧 Abrir</button>
-        </a>
-        """, unsafe_allow_html=True)
+    apps_col2 = [
+        ("Conversión de Audio a Texto", "audio_atexto.jpg", "https://intro2-fojj4mqk3pvfuy4gb5twvg.streamlit.app/", "🎧 Abrir aplicación de Audio a Texto"),
+        ("Análisis de Documentos", "analisis_texto.jpg", "https://textoesp.streamlit.app/", "📑 Abrir Análisis de Documentos"),
+        ("Detección de Rostros", "OCR.jpg", "https://ocr-isa2.streamlit.app/", "🧠 Abrir aplicación de Detección de Rostros"),
+        ("Reconocer el Dibujo", "dibujo.jpg", "https://reconnocer-el-dibujo.streamlit.app/", "🖌️ Abrir Reconocimiento de Dibujo"),
+        ("Control LED (IoT)", "control.jpg", "https://enviarcmqttisa.streamlit.app/", "💡 Abrir Control LED (IoT)")
+    ]
 
-    # Análisis de Documentos
-    st.subheader("Análisis de Documentos")
-    image = Image.open('analisis_texto.jpg')
-    st.image(image, width=220)
-    st.write("Analiza el contenido de documentos con IA 📑")
-    st.markdown(
-        """
-        <a href="https://textoesp.streamlit.app/" target="_blank">
-            <button style="background-color:#ff66b3;color:white;border:none;padding:12px 24px;border-radius:10px;font-size:16px;cursor:pointer;">📑 Abrir</button>
-        </a>
-        """, unsafe_allow_html=True)
+    for title, img, link, button in apps_col2:
+        with st.container():
+            st.markdown(f"<div class='app-card'><h3>{title}</h3>", unsafe_allow_html=True)
+            st.image(Image.open(img), width=200)
+            st.markdown(f"""
+                <p></p>
+                <a href="{link}" target="_blank">
+                    <button style="
+                        background-color:#ff66b3;
+                        color:white;
+                        border:none;
+                        padding:12px 24px;
+                        border-radius:8px;
+                        font-size:16px;
+                        cursor:pointer;
+                    ">{button}</button>
+                </a></div>
+            """, unsafe_allow_html=True)
 
-    # Detección de Rostros
-    st.subheader("Detección de Rostros")
-    image = Image.open('OCR.jpg')
-    st.image(image, width=220)
-    st.write("Detecta rostros y obtén resultados multilenguaje 🧠")
-    st.markdown(
-        """
-        <a href="https://ocr-isa2.streamlit.app/" target="_blank">
-            <button style="background-color:#ff66b3;color:white;border:none;padding:12px 24px;border-radius:10px;font-size:16px;cursor:pointer;">🧠 Abrir</button>
-        </a>
-        """, unsafe_allow_html=True)
-
-    # Reconocer el Dibujo
-    st.subheader("Reconocer el Dibujo")
-    image = Image.open('dibujo.jpg')
-    st.image(image, width=220)
-    st.write("Sube un dibujo y deja que la IA lo interprete 🎨")
-    st.markdown(
-        """
-        <a href="https://reconnocer-el-dibujo.streamlit.app/" target="_blank">
-            <button style="background-color:#ff66b3;color:white;border:none;padding:12px 24px;border-radius:10px;font-size:16px;cursor:pointer;">🎨 Abrir</button>
-        </a>
-        """, unsafe_allow_html=True)
-
-    # Control LED
-    st.subheader("Control LED (IoT)")
-    image = Image.open('control.jpg')
-    st.image(image, width=220)
-    st.write("Controla un sistema LED con comandos MQTT 💡")
-    st.markdown(
-        """
-        <a href="https://enviarcmqttisa.streamlit.app/" target="_blank">
-            <button style="background-color:#ff66b3;color:white;border:none;padding:12px 24px;border-radius:10px;font-size:16px;cursor:pointer;">💡 Abrir</button>
-        </a>
-        """, unsafe_allow_html=True)
-
-
-# 🔹 COLUMNA 3 🔹
+# --------- COLUMNA 3 ---------
 with col3:
-    # OCR Final
-    st.subheader("Reconocimiento Óptico de Caracteres")
-    image = Image.open('ocr_final.jpg')
-    st.image(image, width=220)
-    st.write("Convierte texto desde imágenes de forma precisa 🔤")
-    st.markdown(
-        """
-        <a href="https://isavinasco.streamlit.app/" target="_blank">
-            <button style="background-color:#ff66b3;color:white;border:none;padding:12px 24px;border-radius:10px;font-size:16px;cursor:pointer;">🔤 Abrir</button>
-        </a>
-        """, unsafe_allow_html=True)
+    apps_col3 = [
+        ("Reconocimiento Óptico de Caracteres", "ocr_final.jpg", "https://isavinasco.streamlit.app/", "🔤 Abrir Aplicación OCR Final"),
+        ("Análisis de Textos en Inglés", "texto_ingles.jpg", "https://isabela-vinasco-docs.streamlit.app/", "🇬🇧 Abrir Análisis de Textos en Inglés"),
+        ("Chat con PDF", "chat_pdf.jpg", "https://chatpdfejercicioisa.streamlit.app/", "📄 Abrir Chat con PDF"),
+        ("Historia a partir de un Dibujo", "historia.jpg", "https://historia-infantil.streamlit.app/", "🧚 Abrir Historia a partir de un Dibujo")
+    ]
 
-    # Análisis de Textos en Inglés
-    st.subheader("Análisis de Textos en Inglés")
-    image = Image.open('texto_ingles.jpg')
-    st.image(image, width=220)
-    st.write("Analiza textos en inglés, sentimientos y temas 🇬🇧")
-    st.markdown(
-        """
-        <a href="https://isabela-vinasco-docs.streamlit.app/" target="_blank">
-            <button style="background-color:#ff66b3;color:white;border:none;padding:12px 24px;border-radius:10px;font-size:16px;cursor:pointer;">🇬🇧 Abrir</button>
-        </a>
-        """, unsafe_allow_html=True)
-
-    # Chat con PDF
-    st.subheader("Chat con PDF")
-    image = Image.open('chat_pdf.jpg')
-    st.image(image, width=220)
-    st.write("Interactúa con un PDF usando IA 💬")
-    st.markdown(
-        """
-        <a href="https://chatpdfejercicioisa.streamlit.app/" target="_blank">
-            <button style="background-color:#ff66b3;color:white;border:none;padding:12px 24px;border-radius:10px;font-size:16px;cursor:pointer;">📄 Abrir</button>
-        </a>
-        """, unsafe_allow_html=True)
-
-    # Historia a partir de un Dibujo
-    st.subheader("Historia a partir de un Dibujo")
-    image = Image.open('historia.jpg')
-    st.image(image, width=220)
-    st.write("Genera una historia completa a partir de un dibujo infantil ✨")
-    st.markdown(
-        """
-        <a href="https://historia-infantil.streamlit.app/" target="_blank">
-            <button style="background-color:#ff66b3;color:white;border:none;padding:12px 24px;border-radius:10px;font-size:16px;cursor:pointer;">🧚 Abrir</button>
-        </a>
-        """, unsafe_allow_html=True)
+    for title, img, link, button in apps_col3:
+        with st.container():
+            st.markdown(f"<div class='app-card'><h3>{title}</h3>", unsafe_allow_html=True)
+            st.image(Image.open(img), width=200)
+            st.markdown(f"""
+                <p></p>
+                <a href="{link}" target="_blank">
+                    <button style="
+                        background-color:#ff66b3;
+                        color:white;
+                        border:none;
+                        padding:12px 24px;
+                        border-radius:8px;
+                        font-size:16px;
+                        cursor:pointer;
+                    ">{button}</button>
+                </a></div>
+            """, unsafe_allow_html=True)
