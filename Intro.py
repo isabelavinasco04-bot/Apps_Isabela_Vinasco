@@ -161,15 +161,6 @@ with col2:
     """,
     unsafe_allow_html=True
     )
-
-
-
-
-
-
-
-
-    
     # --- App: Detección de Rostros ---
     st.subheader("Detección de Rostros")
     image = Image.open('OCR.jpg')  # 👈 usa tu imagen real
@@ -192,7 +183,31 @@ with col2:
     </a>
     """,
     unsafe_allow_html=True
-)
+    )
+
+    # --- App: Reconocer el Dibujo ---
+    st.subheader("Reconocer el Dibujo")
+    image = Image.open('dibujo.jpg')  # 👈 asegúrate de que esté en la misma carpeta que Intro.py
+    st.image(image, width=200)
+    st.write("En esta aplicación podrás subir un dibujo o realizar uno a mano, y la Inteligencia Artificial intentará reconocer qué representa tu creación. 🎨")
+    st.markdown(
+    """
+    <a href="https://reconnocer-el-dibujo.streamlit.app/" target="_blank">
+        <button style="
+            background-color:#ff66b3;
+            color:white;
+            border:none;
+            padding:12px 24px;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+        ">
+            🖌️ Abrir Reconocimiento de Dibujo
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True
+    )
 
 
 with col3:
