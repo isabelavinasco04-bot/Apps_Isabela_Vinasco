@@ -258,6 +258,30 @@ with col2:
     """,
     unsafe_allow_html=True
     )
+    # --- App: Control LED (IoT) ---
+    st.subheader("Control LED (IoT)")
+    image = Image.open('control.jpg')  # 👈 asegúrate de tener el archivo en la misma carpeta que Intro.py
+    st.image(image, width=200)
+    st.write("En esta aplicación podrás controlar un sistema LED mediante comandos MQTT, interactuando con dispositivos IoT en tiempo real. 💡")
+    st.markdown(
+    """
+    <a href="https://enviarcmqttisa.streamlit.app/" target="_blank">
+        <button style="
+            background-color:#ff66b3;
+            color:white;
+            border:none;
+            padding:12px 24px;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+        ">
+            💡 Abrir Control LED (IoT)
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True
+)
+
 
 
 with col3:
