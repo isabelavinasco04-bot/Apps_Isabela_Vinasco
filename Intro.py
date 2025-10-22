@@ -109,7 +109,29 @@ with col1:
     """,
     unsafe_allow_html=True
     )
-
+    # --- App: Mi Primera App ---
+    st.subheader("Mi Primera App")
+    image = Image.open('app1.jpg')  # 👈 asegúrate de tenerla en la misma carpeta que Intro.py
+    st.image(image, width=200)
+    st.write("Esta fue mi primera aplicación desarrollada con Streamlit. 🌸 Un punto de partida en mi camino de exploración con la Inteligencia Artificial, la programación y la creatividad digital.")
+    st.markdown(
+    """
+    <a href="https://miprimeraappisa.streamlit.app/" target="_blank">
+        <button style="
+            background-color:#ff66b3;
+            color:white;
+            border:none;
+            padding:12px 24px;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+        ">
+            💗 Abrir Mi Primera App
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True
+)
 with col2:
     
     #APP 2
