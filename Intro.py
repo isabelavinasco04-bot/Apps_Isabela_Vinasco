@@ -62,12 +62,29 @@ with col1:
     unsafe_allow_html=True
     )
 
-    st.subheader("Entrenando Modelos")
-    image = Image.open('OIG5.jpg')
+    # --- App: Reconocimiento de Objetos en Imagen ---
+    st.subheader("Reconocimiento de Objetos en Imagen")
+    image = Image.open('vision_app.jpg')  # 👈 asegúrate de que este archivo esté en tu carpeta
     st.image(image, width=200)
-    st.write("En la siguiente enlace veremos cómo puedes usar tu modelo entrenado.")
-    url = "https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/"
-    st.write(f"YOLO: [Enlace]({url})")
+    st.write("En esta aplicación podrás subir una imagen y el modelo de IA reconocerá los objetos presentes, mostrándolos en pantalla.")
+    st.markdown(
+    """
+    <a href="https://visionapp-isa-lpq3fitf2jwnkastes8odi.streamlit.app/" target="_blank">
+        <button style="
+            background-color:#ff66b3;
+            color:white;
+            border:none;
+            padding:12px 24px;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+        ">
+            🖼️ Abrir Reconocimiento de Objetos
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True
+    )
 
 with col2:
     #APP 2
