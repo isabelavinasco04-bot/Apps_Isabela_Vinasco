@@ -285,6 +285,28 @@ with col3:
     """,
     unsafe_allow_html=True
     )
-   
+    # --- App: Historia a partir de un Dibujo ---
+    st.subheader("Historia a partir de un Dibujo")
+    image = Image.open('historia.jpg')  # 👈 asegúrate de que el archivo esté en la misma carpeta que Intro.py
+    st.image(image, width=200)
+    st.write("En esta aplicación podrás generar una historia completa a partir de un dibujo infantil. La Inteligencia Artificial interpreta la imagen y crea un cuento mágico inspirado en ella. ✨")
+    st.markdown(
+    """
+    <a href="https://historia-infantil.streamlit.app/" target="_blank">
+        <button style="
+            background-color:#ff66b3;
+            color:white;
+            border:none;
+            padding:12px 24px;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+        ">
+            🧚 Abrir Historia a partir de un Dibujo
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True
+    )
 
 
