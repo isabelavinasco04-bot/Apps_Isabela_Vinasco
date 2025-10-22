@@ -96,7 +96,7 @@ with col2:
     )
     # --- App: Chat con PDF ---
     st.subheader("Chat con PDF")
-    image = Image.open('sentimientos.jpg')  # Asegúrate que la imagen esté en la carpeta correcta
+    image = Image.open('chat_pdf.jpg')  # Asegúrate que la imagen esté en la carpeta correcta
     st.image(image, width=200)
     st.write("En esta aplicación podrás interactuar de forma conversacional con el contenido de un documento PDF usando IA.")
     st.markdown(
