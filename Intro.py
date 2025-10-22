@@ -21,6 +21,13 @@ button {
     display: block;
     margin: 0 auto;
 }
+
+/* 💗 --- FIX para quitar las líneas azules de los enlaces --- */
+a, a:visited, a:hover, a:active {
+    text-decoration: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
 </style>
 """
 st.markdown(page_bg, unsafe_allow_html=True)
