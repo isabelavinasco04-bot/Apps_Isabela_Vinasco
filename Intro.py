@@ -62,11 +62,11 @@ with col1:
     unsafe_allow_html=True
     )
 
-    # --- App: Reconocimiento de Objetos en Imagen ---
-    st.subheader("Reconocimiento de Objetos en Imagen")
+    # --- App: Inter de Objetos en Imagen ---
+    st.subheader("Interpretación de Objetos en Imagen")
     image = Image.open('vision_app.jpg')  # 👈 asegúrate de que este archivo esté en tu carpeta
     st.image(image, width=200)
-    st.write("En esta aplicación podrás subir una imagen y el modelo de IA reconocerá los objetos presentes, mostrándolos en pantalla.")
+    st.write("En esta aplicación podrás subir una imagen y el modelo de IA interpretará, mostrándolos en pantalla.")
     st.markdown(
     """
     <a href="https://visionapp-isa-lpq3fitf2jwnkastes8odi.streamlit.app/" target="_blank">
