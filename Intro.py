@@ -134,12 +134,29 @@ with col2:
     """,
     unsafe_allow_html=True
     )
-    st.subheader("Transcriptor Audio y Video")
-    image = Image.open('OIG3.jpg')
+    # --- App: Chat con PDF en Inglés ---
+    st.subheader("Chat con PDF en Inglés")
+    image = Image.open('1d.jpg')  # 👈 asegúrate de tener esta imagen en la misma carpeta que Intro.py
     st.image(image, width=200)
-    st.write("En la siguiente enlace veremos cómo realizamos transcripciones de audio/video.")
-    url = "https://transcript-whisper.streamlit.app/"
-    st.write(f"Transcriptor: [Enlace]({url})")
+    st.write("En esta aplicación podrás conversar con documentos PDF en inglés y obtener respuestas contextuales impulsadas por IA.")
+    st.markdown(
+    """
+    <a href="https://chatpdfingles.streamlit.app/" target="_blank">
+        <button style="
+            background-color:#ff66b3;
+            color:white;
+            border:none;
+            padding:12px 24px;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+        ">
+            📚 Abrir Chat con PDF (Inglés)
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True
+    )
 
 with col3:
     # --- App: Detección de Rostros ---
