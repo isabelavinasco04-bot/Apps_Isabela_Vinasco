@@ -94,13 +94,29 @@ with col2:
     """,
     unsafe_allow_html=True
     )
-    st.subheader("Análisis de Datos")
-    image = Image.open('data_analisis.png')
-    st.image(image, width=190)
-    st.write("En la siguiente enlace veremos cómo se pueden analizar datos usando agentes.")
-    url = "https://asistpy-csv.streamlit.app/"
-    st.write(f"Datos: [Enlace]({url})")
-
+    # --- App: Chat con PDF ---
+    st.subheader("Chat con PDF")
+    image = Image.open('sentimientos.jpg')  # Asegúrate que la imagen esté en la carpeta correcta
+    st.image(image, width=200)
+    st.write("En esta aplicación podrás interactuar de forma conversacional con el contenido de un documento PDF usando IA.")
+    st.markdown(
+    """
+    <a href="https://chatpdfejercicioisa.streamlit.app/" target="_blank">
+        <button style="
+            background-color:#ff66b3;
+            color:white;
+            border:none;
+            padding:12px 24px;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+        ">
+            📄 Abrir Chat con PDF
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True
+    )
     st.subheader("Transcriptor Audio y Video")
     image = Image.open('OIG3.jpg')
     st.image(image, width=200)
