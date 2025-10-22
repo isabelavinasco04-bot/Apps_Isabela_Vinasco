@@ -246,13 +246,12 @@ with col3:
     """,
     unsafe_allow_html=True
     )
-
-# --- App: Reconocimiento de Gestos ---
-st.subheader("Reconocimiento de Gestos")
-image = Image.open('gesto.jpg')  # 👈 asegúrate de que esté en la misma carpeta que Intro.py
-st.image(image, width=200)
-st.write("En esta aplicación podrás reconocer gestos humanos usando modelos de visión por computadora basados en YOLOv5. Ideal para interacción sin contacto y control gestual.")
-st.markdown(
+    # --- App: Reconocimiento de Gestos ---
+    st.subheader("Reconocimiento de Gestos")
+    image = Image.open('gesto.jpg')  # 👈 asegúrate de que esté en la misma carpeta que Intro.py
+    st.image(image, width=200)
+    st.write("En esta aplicación podrás reconocer gestos humanos usando modelos de visión por computadora basados en YOLOv5. Ideal para interacción sin contacto y control gestual.")
+    st.markdown(
     """
     <a href="https://yolov5-isa.streamlit.app/" target="_blank">
         <button style="
@@ -269,6 +268,6 @@ st.markdown(
     </a>
     """,
     unsafe_allow_html=True
-)
+    )
 
 
