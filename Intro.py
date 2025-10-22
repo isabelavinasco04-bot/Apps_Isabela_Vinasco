@@ -135,6 +135,30 @@ with col1:
     """,
     unsafe_allow_html=True
     )
+    # --- App: Control por Voz ---
+    st.subheader("Control por Voz")
+    image = Image.open('voice.jpg')  # 👈 asegúrate de que el archivo esté en la misma carpeta que Intro.py
+    st.image(image, width=200)
+    st.write("En esta aplicación podrás controlar acciones mediante comandos de voz, usando reconocimiento de habla y procesamiento de lenguaje natural.")
+    st.markdown(
+    """
+    <a href="https://ctrlvoiceisa.streamlit.app/" target="_blank">
+        <button style="
+            background-color:#ff66b3;
+            color:white;
+            border:none;
+            padding:12px 24px;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+        ">
+            🎙️ Abrir Control por Voz
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True
+    )
+
    
 with col2:
     
