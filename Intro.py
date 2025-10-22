@@ -160,7 +160,30 @@ with col2:
 
 
 with col3:
-   #app 3 OCR
+    # --- App: OCR Final ---
+    st.subheader("OCR Final")
+    image = Image.open('ocr_final.jpg')  # 👈 asegúrate de que esté en la misma carpeta que Intro.py
+    st.image(image, width=200)
+    st.write("En esta aplicación podrás realizar reconocimiento óptico de caracteres (OCR) y convertir texto desde imágenes de forma precisa y rápida.")
+    st.markdown(
+    """
+    <a href="https://isavinasco.streamlit.app/" target="_blank">
+        <button style="
+            background-color:#ff66b3;
+            color:white;
+            border:none;
+            padding:12px 24px;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+        ">
+            🔤 Abrir Aplicación OCR Final
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True
+)
+
      # --- App: Chat con PDF en Inglés ---
     st.subheader("Chat con PDF en Inglés")
     image = Image.open('1d.jpg')  # 👈 asegúrate de tener esta imagen en la misma carpeta que Intro.py
