@@ -87,6 +87,7 @@ with col1:
     )
 
 with col2:
+    
     #APP 2
     # --- App 2: Audio a texto ---
     st.subheader("Conversión de Audio a texto")
@@ -112,6 +113,30 @@ with col2:
     unsafe_allow_html=True
     )
 
+    
+    # --- App: Análisis de Documentos --- APP 5
+    st.subheader("Análisis de Documentos")
+    image = Image.open('analisis_texto.jpg')  # 👈 asegúrate de que esté en la misma carpeta que Intro.py
+    st.image(image, width=200)
+    st.write("En esta aplicación podrás analizar el contenido de documentos en texto, identificar temas clave y generar resúmenes con ayuda de Inteligencia Artificial.")
+    st.markdown(
+    """
+    <a href="https://textoesp.streamlit.app/" target="_blank">
+        <button style="
+            background-color:#ff66b3;
+            color:white;
+            border:none;
+            padding:12px 24px;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+        ">
+            📑 Abrir Análisis de Documentos
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True
+    )
 
 
 
