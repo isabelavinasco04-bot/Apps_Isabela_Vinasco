@@ -134,29 +134,7 @@ with col2:
     """,
     unsafe_allow_html=True
     )
-    # --- App: Chat con PDF en Inglés ---
-    st.subheader("Chat con PDF en Inglés")
-    image = Image.open('1d.jpg')  # 👈 asegúrate de tener esta imagen en la misma carpeta que Intro.py
-    st.image(image, width=200)
-    st.write("En esta aplicación podrás conversar con documentos PDF en inglés y obtener respuestas contextuales impulsadas por IA.")
-    st.markdown(
-    """
-    <a href="https://chatpdfingles.streamlit.app/" target="_blank">
-        <button style="
-            background-color:#ff66b3;
-            color:white;
-            border:none;
-            padding:12px 24px;
-            border-radius:8px;
-            font-size:16px;
-            cursor:pointer;
-        ">
-            📚 Abrir Chat con PDF (Inglés)
-        </button>
-    </a>
-    """,
-    unsafe_allow_html=True
-    )
+   #app 8
 
 with col3:
     # --- App: Detección de Rostros ---
@@ -183,13 +161,29 @@ with col3:
     unsafe_allow_html=True
 )
 
-    st.subheader("Análisis de Imagen")
-    image = Image.open('OIG4.jpg')
+     # --- App: Chat con PDF en Inglés ---
+    st.subheader("Chat con PDF en Inglés")
+    image = Image.open('1d.jpg')  # 👈 asegúrate de tener esta imagen en la misma carpeta que Intro.py
     st.image(image, width=200)
-    st.write("En la siguiente enlace veremos la capacidad de análisis en imágenes.")
-    url = "https://vision2-gpt4o.streamlit.app/"
-    st.write(f"Visión: [Enlace]({url})")
-
+    st.write("En esta aplicación podrás conversar con documentos PDF en inglés y obtener respuestas contextuales impulsadas por IA.")
+    st.markdown(
+    """
+    <a href="https://chatpdfingles.streamlit.app/" target="_blank">
+        <button style="
+            background-color:#ff66b3;
+            color:white;
+            border:none;
+            padding:12px 24px;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+        ">
+            📚 Abrir Chat con PDF (Inglés)
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True
+    )
     st.subheader("Sistema Ciberfísico")
     image = Image.open('OIG6.jpg')
     st.image(image, width=200)
