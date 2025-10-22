@@ -134,9 +134,6 @@ with col2:
     """,
     unsafe_allow_html=True
     )
-   #app 8
-
-with col3:
     # --- App: Detección de Rostros ---
     st.subheader("Detección de Rostros")
     image = Image.open('OCR.jpg')  # 👈 usa tu imagen real
@@ -161,6 +158,9 @@ with col3:
     unsafe_allow_html=True
 )
 
+
+with col3:
+   #app 3 OCR
      # --- App: Chat con PDF en Inglés ---
     st.subheader("Chat con PDF en Inglés")
     image = Image.open('1d.jpg')  # 👈 asegúrate de tener esta imagen en la misma carpeta que Intro.py
